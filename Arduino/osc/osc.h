@@ -288,6 +288,7 @@ int main()                        // enforce main() loop w/o serial handler
 {
   os::init();
   setup();
+  UCSR0B = 0;                       	// brute-force the USART off just in case...
   while(true) loop();
 }
 
